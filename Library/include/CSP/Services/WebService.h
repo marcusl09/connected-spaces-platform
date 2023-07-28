@@ -100,14 +100,14 @@ protected:
 	ResultBase(csp::services::EResultCode ResCode, uint16_t HttpResCode);
 	void SetResult(csp::services::EResultCode ResCode, uint16_t HttpResCode);
 
+	csp::common::String ResponseBody;
+
 private:
 	EResultCode Result		  = EResultCode::Init;
 	uint16_t HttpResponseCode = 0;
 
 	float RequestProgress  = 0.0f;
 	float ResponseProgress = 0.0f;
-
-	csp::common::String ResponseBody;
 };
 
 } // namespace csp::services
